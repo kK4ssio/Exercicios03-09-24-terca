@@ -63,6 +63,23 @@ public class ListaExercicios0309 {
 
         // Calcular e exibir a média salarial do departamento
         System.out.println("Média salarial do departamento " + departamentoTI.getNome() + ": " + departamentoTI.calcularMediaSalarial());
-    }
-    
+        
+         System.out.println("============================================================================================");
+
+         //Exercicio 3.
+          // Criar instâncias de Ex3Usuario (autores e comentadores)
+        Ex3Usuario autorPublicacao = new Ex3Usuario("João");
+        Ex3Usuario usuarioComentario1 = new Ex3Usuario("Maria");
+        Ex3Usuario usuarioComentario2 = new Ex3Usuario("Pedro");
+
+        // Criar uma publicação
+        Ex3Publicacao publicacao = new Ex3Publicacao(autorPublicacao, "Hoje é um ótimo dia para programar!");
+
+        // Adicionar comentários à publicação
+        publicacao.adicionarComentario(usuarioComentario1, "Concordo plenamente!");
+        publicacao.adicionarComentario(usuarioComentario2, "Também estou animado para programar hoje.");
+
+        // Listar todos os comentários da publicação
+        publicacao.listarComentarios();
+    }    
 }
