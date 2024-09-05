@@ -81,5 +81,31 @@ public class ListaExercicios0309 {
 
         // Listar todos os comentários da publicação
         publicacao.listarComentarios();
+        
+         System.out.println("============================================================================================");
+        
+        //Exercicio 4.
+         // Criando o sistema de reservas
+        Ex4SistemaReservas sistema = new Ex4SistemaReservas();
+
+        // Criando alguns voos
+        Ex4Voos voo1 = new Ex4Voos("TP123", "Lisboa", "Porto", 2);
+        Ex4Voos voo2 = new Ex4Voos("TP456", "Lisboa", "Madrid", 1);
+        sistema.adicionarVoo(voo1);
+        sistema.adicionarVoo(voo2);
+
+        // Criando passageiros
+        Ex4Passageiros p1 = new Ex4Passageiros("João Silva", "001");
+        Ex4Passageiros p2 = new Ex4Passageiros("Maria Santos", "002");
+
+        // Fazendo reservas
+        sistema.reservarVoo(p1, "TP123");
+        sistema.reservarVoo(p2, "TP123");
+        sistema.reservarVoo(p1, "TP456");
+        sistema.reservarVoo(p2, "TP456"); // Este voo já estará lotado
+
+        // Listando as reservas de um passageiro
+        sistema.listarReservasPassageiro(p1);
+        sistema.listarReservasPassageiro(p2);
     }    
 }
