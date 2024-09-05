@@ -38,6 +38,31 @@ public class ListaExercicios0309 {
         estoque.listarProdutosEstoqueBaixo(30);
         
         System.out.println("============================================================================================");
+        
+        //Exercicio 2.
+         // Criar alguns projetos
+        Ex2Projeto projeto1 = new Ex2Projeto("Sistema de Vendas");
+        Ex2Projeto projeto2 = new Ex2Projeto("Website da Empresa");
+
+        // Criar alguns funcionários
+        Ex2Funcionario funcionario1 = new Ex2Funcionario("João", 2000.00);
+        Ex2Funcionario funcionario2 = new Ex2Funcionario("Maria", 3000.00);
+
+        // Atribuir projetos aos funcionários
+        funcionario1.adicionarProjeto(projeto1);
+        funcionario2.adicionarProjeto(projeto2);
+
+        // Criar um departamento e adicionar funcionários
+        Ex2Departamento departamentoTI = new Ex2Departamento("Tecnologia da Informação");
+        departamentoTI.adicionarFuncionario(funcionario1);
+        departamentoTI.adicionarFuncionario(funcionario2);
+
+        // Exibir projetos dos funcionários
+        funcionario1.exibirProjetos();
+        funcionario2.exibirProjetos();
+
+        // Calcular e exibir a média salarial do departamento
+        System.out.println("Média salarial do departamento " + departamentoTI.getNome() + ": " + departamentoTI.calcularMediaSalarial());
     }
     
 }
